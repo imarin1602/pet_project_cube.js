@@ -1,9 +1,13 @@
 const db = require('../db');
 
+
+/**
+ * DEBAG
+ */
 class BookingsController {
     async getBookings(request, response) {
-        const bookings = await db.query('select * from bookings');
-        return response.json(bookings);
+        const bookings = await db.query('select * from bookings limit 100');
+        return response.json(bookings.rows);
     }
 }
 
