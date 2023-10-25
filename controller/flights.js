@@ -42,13 +42,13 @@ class Fligths {
         } 
         else
         {
-            const status = await db.query(`
+            const result = await db.query(`
                 SELECT *
                 FROM flights f 
-                WHERE status = '${aircraftCodeFromQuery}'
+                WHERE status = '${statusFromQuery}'
                 AND aircraft_code = '${aircraftCodeFromQuery}';
             `);
-            return response.json(status.rows);
+            return response.json(result.rows);
         }
     }
 
