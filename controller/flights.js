@@ -2,10 +2,13 @@ const db = require('../db');
 
 class Fligths {
     async getStatus(request, response) {
+        //api/fligths?status=Departed&aircraft_code=SU9
+
 
         //Получаем массив arrayAircraftCodes всех кодов аэропортов 
         //для валидации ключа aircraft_code в get запросе
-        //api/fligths?status=Departed&aircraft_code=SU9
+        //На случай если будут добавлены новын аэропрты
+        //Пока так ['CN1', 'CR2', '773', '763', '319', '733', '321', 'SU9']
         const aircraft_code = await db.query(`
             SELECT DISTINCT aircraft_code
             FROM flights;
