@@ -2,6 +2,7 @@ const db = require('../db');
 
 class Fligths {
     async getStatus(request, response) {
+        //В GET передаем два ключа 1. статус рейса, 2. код аэропорта
         //api/fligths?status=Departed&aircraft_code=SU9
 
 
