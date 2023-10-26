@@ -51,7 +51,5 @@ class Fligths {
             return response.json(result.rows);
         }
     }
-
 }
-
 module.exports = new Fligths();

@@ -8,7 +8,7 @@ const db = require('../db');
  * page - номер страницы в пагинаторе
  * 
  */
-class Teackets {
+class Tickets {
     async numberPassengerFlights(request, response) {
         //Получаем из GET параментр entries (количество записей)
         // и приводим к числу
@@ -54,4 +54,4 @@ class Teackets {
     }
 }
 
-module.exports = new Teackets();
+module.exports = new Tickets();
